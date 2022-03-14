@@ -1,0 +1,237 @@
+.hero {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+
+  &__wrapper {
+    @include breakpoint-down(medium) {
+      flex-wrap: wrap;
+    }
+  }
+
+  // Left
+
+  &__circle {
+    background-color: $yellow;
+    position: relative;
+    width: 915px;
+    height: 887px;
+    left: -252px;
+    top: -131px;
+    border-radius: 50%;
+
+    @include breakpoint-down(small) {
+      width: 715px;
+      height: 687px;
+    }
+
+    @include breakpoint-down(medium) {
+      left: -140px;
+    }
+  }
+
+  .left-wrapper {
+    position: relative;
+    left: 200px;
+    top: 100px;
+
+    @include breakpoint-down(medium) {
+      left: 100px;
+      width: 400px;
+      height: 600px;
+    }
+  }
+
+  &__dark-circle {
+    position: absolute;
+    width: 237px;
+    height: 37px;
+    left: 168px;
+    top: 621px;
+    border-radius: 50%;
+    z-index: 1;
+    background: rgba(52, 52, 52, 0.4);
+
+    @include breakpoint-down(small) {
+      width: 200px;
+      height: 27px;
+      left: 68px;
+      top: 510px;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 204px;
+    left: 228px;
+    z-index: 2;
+
+    @include breakpoint-down(small) {
+      width: 102.86px;
+      height: 405.98px;
+      left: 110px;
+      top: 150px;
+    }
+  }
+
+  &__line-label1 {
+    position: absolute;
+    z-index: 3;
+    left: 482px;
+    top: 170px;
+
+    span {
+      opacity: 0;
+      transition: all 500ms ease;
+    }
+
+    span.fade {
+      opacity: 1;
+    }
+
+    @include breakpoint-down(small) {
+      left: 300px;
+      top: 150px;
+    }
+  }
+
+  &__line-label2 {
+    position: absolute;
+    z-index: 3;
+
+    opacity: 0;
+    animation: fade-slide-in 800ms linear 1500ms 1 normal forwards;
+
+    @include breakpoint-down(small) {
+      left: 307px;
+      top: 420px;
+      animation: fade-in 800ms linear 1500ms 1 normal forwards;
+    }
+  }
+
+  #line-top {
+    position: absolute;
+    left: 325px;
+    top: 180.59px;
+    z-index: 3;
+
+    @include breakpoint-down(small) {
+      width: 100.43px;
+      left: 190px;
+      top: 150px;
+    }
+  }
+
+  #line-bottom {
+    position: absolute;
+    left: 350px;
+    top: 466px;
+    z-index: 3;
+
+    @include breakpoint-down(small) {
+      width: 100.43px;
+      left: 200px;
+      top: 400px;
+    }
+  }
+
+  #circle-top {
+    stroke: $black;
+    stroke-width: 2px;
+    fill: transparent;
+    stroke-dasharray: 16.191686630249023;
+    stroke-dashoffset: 16.191686630249023;
+    animation: draw 300ms linear 0s 1 normal forwards;
+  }
+
+  #vector-top {
+    stroke: $black;
+    stroke-width: 2px;
+    fill: transparent;
+    stroke-dasharray: 160.92660522460938;
+    stroke-dashoffset: 160.92660522460938;
+    animation: draw 600ms linear 300ms 1 normal forwards;
+  }
+
+  #circle-bottom {
+    stroke: $black;
+    stroke-width: 2px;
+    fill: transparent;
+    stroke-dasharray: 16.191686630249023;
+    stroke-dashoffset: 16.191686630249023;
+    animation: draw 400ms linear 1s 1 normal forwards;
+  }
+
+  #vector-bottom {
+    stroke: $black;
+    stroke-width: 2px;
+    fill: transparent;
+    stroke-dasharray: 160.92660522460938;
+    stroke-dashoffset: 160.92660522460938;
+    animation: draw 800ms linear 1500ms 1 normal forwards;
+  }
+
+  // Right
+
+  &__honza-stats {
+    margin: 100px 191px 0 auto;
+    position: relative;
+    height: fit-content;
+    flex-direction: column;
+
+    @include breakpoint-down(medium) {
+      margin: 0 auto;
+
+      .right-wrapper {
+        margin-top: -170px;
+        margin-bottom: 100px;
+      }
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    span {
+      width: 348px;
+      height: 13px;
+      display: block;
+      background-color: #c4c4c4;
+    }
+  }
+
+  .loading-bar1::before {
+    content: "";
+    display: block;
+    height: 100%;
+    background-color: $yellow;
+    animation: loading1 3s infinite;
+  }
+
+  .loading-bar2::before {
+    content: "";
+    display: block;
+    height: 100%;
+    background-color: $yellow;
+    animation: loading2 3s infinite;
+    animation-delay: 0.2s;
+  }
+
+  .loading-bar3::before {
+    content: "";
+    display: block;
+    height: 100%;
+    background-color: $yellow;
+    animation: loading3 3s infinite;
+    animation-delay: 0.4s;
+  }
+
+  .loading-bar4::before {
+    content: "";
+    display: block;
+    height: 100%;
+    background-color: $yellow;
+    animation: loading4 3s infinite;
+    animation-delay: 0.6s;
+  }
+}

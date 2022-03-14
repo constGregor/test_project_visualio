@@ -1,0 +1,68 @@
+ @keyframes loading1 {
+    0% { 
+      width: 0; }
+    40%, 70% {
+       width: 85px; }
+    100% {
+       width: 0; }
+}
+
+@keyframes loading2 {
+  0% { 
+    width: 0; }
+  40%, 70% {
+     width: 128px; }
+  100% {
+     width: 0; }
+}
+
+@keyframes loading3 {
+  0% { 
+    width: 0; }
+  40%, 70% {
+     width: 37px; }
+  100% {
+     width: 0; }
+}
+
+@keyframes loading4 {
+  0% { 
+    width: 0; }
+  40%, 70% {
+     width: 187px; }
+  100% {
+     width: 0; }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-slide-in {
+  0% { 
+    left: 400px;
+    top: 487px;
+    opacity: 0; }
+
+    50% {
+      opacity: 0.2;
+    }
+  100% { 
+    left: 505px;
+    top: 487px;
+    opacity: 1; }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
